@@ -1,0 +1,14 @@
+{% extends 'seminarsapp/base.html' %}
+
+{% block content %}
+    <h3>
+        {{ name }}
+    </h3>
+
+    {% for i in random_num %}
+    <p>
+        {{ i }}
+    </p>
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'seminarsapp/base.html' %}
+
+{% block content %}
+    <h3>
+        {{ descript }}
+    </h3>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="отправка">
+    </form>
+
+{% endblock %}

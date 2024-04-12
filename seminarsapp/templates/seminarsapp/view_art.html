@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }}</title>
+</head>
+<body>
+<h3>
+    {% for i in art %}
+        {% if i.publicated_flag %}
+            <a href="{% url 'article3' i.pk %}">{{ i.title }}</a>
+        {% else %}
+            {{ i.title }}
+        {% endif %}
+        <br>
+    {% endfor %}
+</h3>
+</body>
+</html>

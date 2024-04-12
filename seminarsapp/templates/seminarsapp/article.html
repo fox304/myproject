@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }}</title>
+</head>
+<body>
+    <h3> {{ art.pk }} {{ art.title }}</h3>
+    {% for comment in com %}
+        {% if comment.changed_date > comment.publicated_date %}
+            <p><b>изменено</b></p>
+        {% endif %}
+        <p>{{ comment.text}}<br>
+        <b>{{ comment.author.fullname }}</b><br>
+        {{ comment.publicated_date }}<br>
+        ---------------------------------</p>
+    {% endfor %}
+
+</body>
+</html>
